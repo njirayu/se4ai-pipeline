@@ -11,7 +11,4 @@ def load_sales(paths: list[Path]) -> pd.DataFrame:
             sqft, bedrooms, year_built, region, sold_date, price
     Output: a single DataFrame (raw, uncleaned)
     """
-    # TODO (Task 1): move the "1. collect" block from train_all.py here.
-    # Read EVERY file in `paths` -- not the fixed name "data/sales_2025.csv".
-    # Hint: pd.concat([pd.read_csv(p) for p in paths], ignore_index=True)
-    raise NotImplementedError("collect.load_sales: move the code from train_all.py")
+    return pd.concat([pd.read_csv(p) for p in paths], ignore_index=True)
